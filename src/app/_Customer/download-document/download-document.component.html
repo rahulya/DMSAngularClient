@@ -1,0 +1,36 @@
+<div class="panel">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <i class="fa fa-tasks"></i>
+          Download Document
+        </h3>
+    </div>
+    <div class="panel-body">
+        <!-- <button (click)="notify('success', 'Bravo! Well done.')">Success</button> -->
+    </div>
+</div>
+
+    <div class="card" style="background:#f0f0f0">
+        <div>
+            <div class="card-body">
+              <div  *ngFor="let item of FormEntryList; let i=index">
+                <div class="form-group row">
+                    <label class="col-sm-3 form-label">{{item.fieldName}}
+                        <span style="color:red;">*</span>
+                    </label>
+                    <div class="col-sm-6">
+                        <!-- <input type="{{item.fieldType}}"class="form-control form-control-sm"  [id]="'documentFile + i'" > -->
+
+                    </div>
+
+                </div>
+            </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-sm btn-primary" style="margin:8px">Save</button>
+                    <button class="btn btn-sm btn-primary" type="reset">Cancel</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>

@@ -24,9 +24,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css",
+              "node_modules/angular-notifier/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -88,6 +96,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +128,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "DMSClient"
+    }
+  },
+  "defaultProject": "DMSClient",
+  "cli": {
+    "analytics": "c0e04f1b-7bab-4886-9a4d-4abd1b15ec78"
+  }
 }

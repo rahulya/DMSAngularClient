@@ -1,0 +1,124 @@
+<div class="panel">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <i class="fa fa-tasks"></i>
+        Create User
+        </h3>
+    </div>
+    <div class="panel-body">
+        <!-- <button (click)="notify('success', 'Bravo! Well done.')">Success</button> -->
+    </div>
+</div>
+<form [formGroup]="form" (ngSubmit)="saveUser()">
+    <div class="card" style="background:#f0f0f0">
+        <div>
+            <div class="card-body">
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label">First Name
+                        <span style="color:red;">*</span>
+                    </label>
+                    <div class="col-sm-2">
+                        <input class="form-control form-control-sm" formControlName="firstName">
+                     
+                    </div>
+
+                    <label class="col-sm-2 form-label">Middle Name
+                        
+                    </label>
+                    <div class="col-sm-2">
+                        <input class="form-control form-control-sm" formControlName="middleName" 
+                           >
+                      
+                    </div>
+                    <label class="col-sm-2 form-label">Last Name
+                        <span style="color:red;">*</span>
+                    </label>
+                    <div class="col-sm-2">
+                        <input class="form-control form-control-sm" formControlName="lastName"
+                           >
+                      
+                    </div>
+
+                </div>
+                <hr />
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label">UserName <span style="color:red;">*</span></label>
+
+                    <div class="col-sm-4">
+                        <input  type="text" formControlName="userName" class="form-control form-control-sm">                   
+                                       
+                    </div>
+                    <label class="col-sm-2 form-label">User Type <span style="color:red;">*</span></label>                   
+                    <div class="col-sm-4"  *ngIf="username=='USER'">
+                        <select formControlName="userRoleID" class="form-control form-control-sm">
+                        <option value="0">Choose one</option>                          
+                        <option value="3">User</option>     
+                        <option value="4">Customer</option>                     
+                    </select>
+                    <div class="col-sm-4" *ngIf="username=='SUPERADMIN'">
+                        <select formControlName="userRoleID" class="form-control form-control-sm">
+                        <option value="0">Choose one</option>                          
+                        <option value="1">Superadmin</option>     
+                        <option value="2">Admin</option>                     
+                    </select> 
+                    
+                </div> 
+                    
+                    </div> 
+                </div>
+                <hr />
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label">Password <span style="color:red;">*</span></label>
+                   
+                        <div class="col-sm-4">
+                            <input type="password" class="form-control form-control-sm" formControlName="password"  >
+                        </div>
+                        <label class="col-sm-2 form-label">User Group <span style="color:red;">*</span></label>                   
+                     
+
+                    <div class="col-sm-4" style="display:inline-flex">
+                        <input id="typeahead-basic" type="text" formControlName="userGroupID"
+                            class="form-control form-control-sm" [ngbTypeahead]="AutocompleteUserGroup"
+                            [resultFormatter]="formatter" (selectItem)="selectUserGrp($event)">
+
+                        <button class="btn btn-xs btn-primary" type="button"
+                            style="height:27px;width:30px;padding:2px 0px 0px 0px;margin-top:2px">
+                            <span class="fa fa-search" aria-hidden="true"></span>
+                        </button>
+                    </div>
+
+                   
+                </div>
+                <div class="form-group row">
+                                      
+                    <label class="col-sm-2 form-label">Confirm Password <span style="color:red;">*</span></label>
+                   
+                        <div class="col-sm-4">
+                            <input type="password" class="form-control form-control-sm" formControlName="confirmpassword"  >
+                        </div>   
+                        <label class="col-sm-2 form-label">Company Group Name<span style="color:red;">*</span> </label>    
+                        <div class="col-sm-4" style="display:inline-flex">
+                            <input id="typeahead-basic" type="text" formControlName="companyGroupID"
+                                class="form-control form-control-sm" [ngbTypeahead]="AutocompleteCompGroup"
+                                [resultFormatter]="formatterr" (selectItem)="selectCompGrp($event)">
+    
+                            <button class="btn btn-xs btn-primary" type="button"
+                                style="height:27px;width:30px;padding:2px 0px 0px 0px;margin-top:2px">
+                                <span class="fa fa-search" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                </div>
+                <hr />            
+                             
+             
+             
+                <div class="text-center">
+                    <button type="submit" class="btn btn-sm btn-primary" style="margin:8px">Save</button>
+                    <button class="btn btn-sm btn-primary" type="reset" >Cancel</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>

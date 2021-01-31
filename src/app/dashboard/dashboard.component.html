@@ -1,0 +1,27 @@
+
+  <div class="container" style="margin-top:70px">
+    <div class="col-sm-12"*ngIf="login.userRoleName=='SUPERADMIN'" >
+      <p>SUPERADMIN</p>
+        <!-- <router-outlet></router-outlet>   -->
+    </div>
+    <div class="col-sm-12"*ngIf="login.userRoleName=='USER'" >
+      <div class=""*ngIf="login.hasCompany==0">
+        <app-companydatabasenew></app-companydatabasenew>
+      </div>
+      <div class=""*ngIf="login.hasCompany==1">
+        <app-companydatabaselist></app-companydatabaselist>
+      </div>
+     <!-- <app-companydatabaselist></app-companydatabaselist> -->
+     
+    </div>
+    <div class="col-sm-12"*ngIf="login.userRoleName=='CUSTOMER'" >
+      <p>CUSTOMER Dashbaord</p>
+      
+    </div>
+    
+    <div class="col-sm-2">
+
+    </div>   
+</div>
+
+

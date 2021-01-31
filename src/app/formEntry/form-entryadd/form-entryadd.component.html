@@ -1,0 +1,74 @@
+<div class="panel">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <i class="fa fa-tasks"></i>
+            {{actionType}} Form Entry
+        </h3>
+    </div>
+    <div class="panel-body">
+        <!-- <button (click)="notify('success', 'Bravo! Well done.')">Success</button> -->
+    </div>
+</div>
+<form [formGroup]="form" (ngSubmit)="FormEntrySave()">
+    <div class="card" style="background:#f0f0f0">
+        <div>
+            <div class="card-body">
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label">Field Name
+                        <span style="color:red;">*</span>
+                    </label>
+                    <div class="col-sm-6">
+                        <input class="form-control form-control-sm" formControlName="fieldName">
+
+                    </div>
+
+                
+                 
+                </div>
+                <hr />
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label">Field Type
+
+                    </label>
+                    <div class="col-sm-6">
+                        <!-- <input class="form-control form-control-sm" formControlName="middle"> -->
+                        <select formControlName="fieldType"[(ngModel)]="fieldType" class="form-control form-control-sm">
+                            <option value="0">Choose one</option>                          
+                            <option value="1">String</option>     
+                            <option value="2">Date</option>  
+                            <option value="3">File</option> 
+                            <option value="4">Number</option>  
+                        </select>  
+                    </div>
+                </div>
+             
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label">Total Width 
+
+                    </label>
+                    <div class="col-sm-6">
+                        <input class="form-control form-control-sm" formControlName="totalWidth">
+
+                    </div>
+                </div>
+
+             
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label">Mandatory<span style="color:red;">*</span></label>
+                    <div class="col-sm-1">
+                        <input type="checkbox" class="form-control form-control-sm" formControlName="mandotaryopt">
+                    </div>     
+                </div>
+				
+           
+           
+                <div class="text-center">
+                    <button type="submit" class="btn btn-sm btn-primary" style="margin:8px">Save</button>
+                    <button class="btn btn-sm btn-primary" type="reset">Cancel</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>

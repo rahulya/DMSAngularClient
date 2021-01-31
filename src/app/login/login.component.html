@@ -1,0 +1,42 @@
+<form [formGroup]="form" (ngSubmit)="Login()">
+<div class="body">
+<div class="login-reg-panel">
+    <div class="login-info-box">
+        <h2>Have an account?</h2>
+       
+        <label id="label-register" for="log-reg-show">Login</label>
+        <input type="radio" name="active-log-panel" id="log-reg-show"  checked="checked">
+    </div>
+                        
+    <div class="register-info-box">
+        <h2>Don't have an account?</h2>
+        <label id="label-login" for="log-login-show">Register</label>
+        <input type="radio" name="active-log-panel" id="log-login-show">
+    </div>
+                        
+    <div class="white-panel">
+        <div class="login-show">
+            <h2>LOGIN</h2>
+            <input type="text"  maxlength="4" formControlName="companyCode" placeholder="Company Code">
+            <input type="text" formControlName="userName" placeholder="User ID">
+            <input type="password" formControlName="password" placeholder="Password">
+            <!-- <input type="submit" class="btn btn-xs btn-danger"  value="Login"> -->
+
+
+            <button [disabled]="loading" class="btn btn-primary">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                Login
+            </button>
+            <!-- <a href="">Forgot password?</a> -->
+        </div>
+        <div class="register-show">
+            <h2>REGISTER</h2>
+            <input type="text" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <input type="password" placeholder="Confirm Password">
+            <input type="button" value="Register">
+        </div>
+    </div>
+</div>
+</div>
+</form>

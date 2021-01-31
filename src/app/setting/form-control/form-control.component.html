@@ -1,0 +1,58 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Checkbox Column -->
+    <!-- <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef>
+        <mat-checkbox (change)="$event ? masterToggle() : null"
+                      [checked]="selection.hasValue() && isAllSelected()"
+                      [indeterminate]="selection.hasValue() && !isAllSelected()">
+        </mat-checkbox>
+      </th>
+      <td mat-cell *matCellDef="let row">
+        <mat-checkbox (click)="$event.stopPropagation()"
+                      (change)="$event ? selection.toggle(row) : null"
+                      [checked]="selection.isSelected(row)">
+        </mat-checkbox>
+      </td>
+    </ng-container> -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="ControlName">
+      <th mat-header-cell *matHeaderCellDef> Control Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.controlName}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="ControlValue">
+      <th mat-header-cell *matHeaderCellDef> Control Value   </th>
+      <td mat-cell *matCellDef="let row">
+        <input class="form-check-input" (change)="checkControlValue(row, $event.target.checked)"name="{{ row.controlVisible}}" type="checkbox" id="{{row.controlVisible}}">  
+      </td>
+      <!-- <td mat-cell *matCellDef="let element"> {{element.control_Value}} </td> -->
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Mandatoryopt">
+      <th mat-header-cell *matHeaderCellDef> Mandatory opt </th>
+      <td mat-cell *matCellDef="let row">
+        <input class="form-check-input" (change)="checkMandatoryopt(row, $event.target.checked)"name="{{ row.mandatory}}" type="checkbox" id="{{row.mandatory}}">  
+
+      </td>
+    </ng-container>
+  
+
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+        (click)="selection.toggle(row)">
+    </tr>
+    
+    
+  </table>
+  <div class="text-center">
+    <button type="button"(click)='SaveDocumentRight()' class="btn btn-sm btn-primary" style="margin:8px">Save</button>
+    <button class="btn btn-sm btn-primary" type="reset">Cancel</button>
+
+</div>
+  
+  

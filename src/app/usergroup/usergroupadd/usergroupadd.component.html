@@ -1,0 +1,53 @@
+<div class="panel">
+  <div class="panel-heading">
+      <h3 class="panel-title">
+          <i class="fa fa-tasks"></i>
+          Create User Group
+      </h3>
+  </div>
+  <div class="panel-body">
+      <!-- <button (click)="notify('success', 'Bravo! Well done.')">Success</button> -->
+  </div>
+</div>
+<form [formGroup]="formm" (ngSubmit)="saveGroup()">
+  <div class="card" style="background:#f0f0f0">
+      <div>
+          <div class="card-body">
+              <div class="form-group row">
+                  <label class="col-sm-2 form-label">User group Name
+                      <span style="color:red;">*</span>
+                  </label>
+                  <div class="col-sm-3">
+                      <input class="form-control form-control-sm" formControlName="name">
+
+                  </div>
+                
+                
+
+              </div>
+            
+          
+           
+              <div class="form-group row">
+                  <label class="col-sm-2 form-label"> Active
+                      <span style="color:red;">*</span>
+                  </label>
+                  <div class="col-sm-1">
+                      <input type="checkbox" class="form-control form-control-sm" formControlName="isActive">
+                  </div>
+              </div>
+
+            
+              
+              <hr />
+
+              <div class="text-center">
+                  <button type="submit" class="btn btn-sm btn-primary" style="margin:8px">Save</button>
+                  <button class="btn btn-sm btn-primary" type="reset">Cancel</button>
+
+              </div>
+          </div>
+
+      </div>
+  </div>
+</form>

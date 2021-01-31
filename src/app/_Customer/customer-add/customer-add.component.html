@@ -1,0 +1,94 @@
+<div class="panel">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <i class="fa fa-tasks"></i>
+            {{actionType}} Customer
+        </h3>
+    </div>
+    <div class="panel-body">
+        <!-- <button (click)="notify('success', 'Bravo! Well done.')">Success</button> -->
+    </div>
+</div>
+<form [formGroup]="form" (ngSubmit)="CustomerSave()">
+    <div class="card" style="background:#f0f0f0">
+        <div>
+            <div class="card-body">
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label">First Name
+                        <span style="color:red;">*</span>
+                    </label>
+                    <div class="col-sm-2">
+                        <input class="form-control form-control-sm" formControlName="firstName">
+
+                    </div>
+
+                    <label class="col-sm-2 form-label">Middle Name
+
+                    </label>
+                    <div class="col-sm-2">
+                        <input class="form-control form-control-sm" formControlName="middle">
+
+                    </div>
+                    <label class="col-sm-2 form-label">Last Name
+                        <span style="color:red;">*</span>
+                    </label>
+                    <div class="col-sm-2">
+                        <input class="form-control form-control-sm" formControlName="lastName">
+                    </div>
+                </div>
+                <hr />
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label">Address <span style="color:red;">*</span></label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control form-control-sm" formControlName="address">
+                    </div>
+                    <label class="col-sm-1 form-label">MobileNo </label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control form-control-sm" formControlName="mobileNo">
+                    </div>
+                    <label class="col-sm-2 form-label">Phone No <span style="color:red;">*</span></label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control form-control-sm" formControlName="phoneNo">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label">Father Name <span style="color:red;">*</span></label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control form-control-sm" formControlName="fatherName">
+                    </div>
+                    <label class="col-sm-2 form-label">Grand Father Name </label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control form-control-sm" formControlName="grandFatherName">
+                    </div>
+                    
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label">Kitta No<span style="color:red;">*</span></label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control form-control-sm" formControlName="kittaNo">
+                    </div>
+                   
+                    <label class="col-sm-2 form-label">Citizenship No</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control form-control-sm" formControlName="citizenshipNo">
+                    </div>
+                 
+                    
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label">Email</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control form-control-sm" formControlName="emailAddress">
+                    </div>
+                    
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-sm btn-primary" style="margin:8px">{{actionType}}</button>
+                    <button class="btn btn-sm btn-primary" type="reset">Cancel</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>

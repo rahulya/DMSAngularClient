@@ -1,0 +1,87 @@
+<div class="panel">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <i class="fa fa-tasks"></i>
+            Create Customer Document
+        </h3>
+    </div>
+    <div class="panel-body">
+        <!-- <button (click)="notify('success', 'Bravo! Well done.')">Success</button> -->
+    </div>
+</div>
+<form [formGroup]="form" (ngSubmit)="CustomerDocumentSave()">
+    <div class="card" style="background:#f0f0f0">
+        <div>
+            <div class="card-body">
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label">Photo copy Of Lalpurja<span style="color:red;">*</span></label>
+                    <div class="col-sm-3">
+                        <input type="file" (change)="onPhotoCopyOfLalpurjaFileChange($event)" class="form-control form-control-sm" formControlName="photocopyOfLalpurjaDoc">
+                    </div>     
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label">Tax Clearance <span style="color:red;">*</span></label>
+                    <div class="col-sm-3">
+                        <input type="file" (change)="onTaxClearanceFileChange($event)" class="form-control form-control-sm" formControlName="taxClearanceDoc">
+                  
+                    </div>     
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label">Citizenship doc<span style="color:red;">*</span></label>
+                    <div class="col-sm-3">
+                        <input type="file"(change)="onCitizenshipDocFileChange($event)" class="form-control form-control-sm" formControlName="citizenshipDoc">
+                    </div>     
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label">Naapi Naksa With KittaNo<span style="color:red;">*</span></label>
+                    <div class="col-sm-3">
+                        <input type="file"(change)="onNaapiNaskaDocFileChange($event)" class="form-control form-control-sm" formControlName="naapiNaksaWithKittaNoDoc">
+                    </div>     
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label">House Desgin Map<span style="color:red;">*</span></label>
+                    <div class="col-sm-3">
+                        <input type="file"(change)="onHouseDesignMapDocFileChange($event)"  class="form-control form-control-sm" formControlName="houseDesginMapDoc">
+                    </div>     
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label">IssueTemporayCertification<span style="color:red;">*</span></label>
+                    <div class="col-sm-3">
+                        <input type="checkbox" class="form-control form-control-sm" formControlName="issueTemporayCertification">
+                    </div>     
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label">PermamentCertification<span style="color:red;">*</span></label>
+                    <div class="col-sm-3">
+                        <input type="checkbox" class="form-control form-control-sm" formControlName="permamentCertification">
+                    </div>     
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label">CompletionCertification<span style="color:red;">*</span></label>
+                    <div class="col-sm-3">
+                        <input type="checkbox" class="form-control form-control-sm" formControlName="completionCertification">
+                    </div>     
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label">ApprovalOfWardChair<span style="color:red;">*</span></label>
+                    <div class="col-sm-3">
+                        <input type="checkbox" class="form-control form-control-sm" formControlName="approvalOfWardChair">
+                    </div>     
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 form-label">ApprovalOfWardChairLackOfAccessOfRoad<span style="color:red;">*</span></label>
+                    <div class="col-sm-3">
+                        <input type="checkbox" class="form-control form-control-sm" formControlName="approvalOfWardChairLackOfAccessOfRoad">
+                    </div>     
+                </div>
+				
+                <div class="text-center">
+                    <button type="submit" class="btn btn-sm btn-primary" style="margin:8px">Save</button>
+                    <button class="btn btn-sm btn-primary" type="reset">Cancel</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>

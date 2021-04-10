@@ -30,33 +30,36 @@ export class NavigationComponent implements OnInit {
 
     this.mScrollbarService.initScrollbar("#sidebar", { axis: 'y', theme: 'metro',scrollButtons: { enable: true } });
     (function ($) {
-      $(document).ready(function () {
-        // mcustomscrollbar('#sidebar',{
-        //     theme: "minimal"
-        // });
-
-        $('#dismiss, .overlay').on('click', function () {
-            $('#sidebar').removeClass('active');
-            $('.overlay').removeClass('active');
+      
+      (function () {
+        "use strict";
+      
+        var treeviewMenu = $('.app-menu');
+      
+        // Toggle Sidebar
+        $('[data-toggle="sidebar"]').click(function(event) {
+          event.preventDefault();
+          $('.app').toggleClass('sidenav-toggled');
         });
-
-        $('#sidebarCollapse').on('click', function () {
-           // $('#sidebar').addClass('active');
-           // $('.overlay').addClass('active');
-           // $('.collapse.in').toggleClass('in');
-         
-            $('#sidebar').toggleClass('active');
-          //  $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      
+        // Activate sidebar treeview toggle
+        $("[data-toggle='treeview']").click(function(event) {
+          event.preventDefault();
+          if(!$(this).parent().hasClass('is-expanded')) {
+            treeviewMenu.find("[data-toggle='treeview']").parent().removeClass('is-expanded');
+          }
+          $(this).parent().toggleClass('is-expanded');
         });
-    });
-
-    $(document).ready(function () {
-      $('ul.nav > li > a').click(function (e) {
-          e.preventDefault();
-          $('ul.nav > li > a').removeClass('active');
-          $(this).addClass('active');
-      });
-  });
+      
+        // Set initial active toggle
+        $("[data-toggle='treeview.'].is-expanded").parent().toggleClass('is-expanded');
+      
+        //Activate bootstrip tooltips
+        $("[data-toggle='tooltip']").tooltip();
+      
+      })();
+      
+   
     })(jQuery);
   }
  

@@ -2,7 +2,7 @@ import { Component,OnInit ,Output, EventEmitter,ElementRef } from '@angular/core
 declare var jQuery:any;
 import { login } from '../app/Models/Login';
 import { ApiUserModuleService } from '../app/service/api-user-module.service';
-import { MalihuScrollbarService } from 'ngx-malihu-scrollbar';
+
 import { companyDatabase } from './Models/CompanyDatabase';
 @Component({
   selector: 'app-root',
@@ -16,49 +16,51 @@ export class AppComponent  implements OnInit {
   login: login;
   companyDatabaseSelected: companyDatabase;
     constructor(private accountService: ApiUserModuleService, lementRef: ElementRef,
-      private mScrollbarService: MalihuScrollbarService,) {
+    ) {
         debugger
-        this.accountService.loginn.subscribe(x => this.login = x);
+        this.accountService.loginn.subscribe(x => this.login =x);
         this.accountService.companySelectedData.subscribe(x=>this.companyDatabaseSelected=x);
     }
 
     ngOnInit() {
 
-      this.mScrollbarService.initScrollbar("#sidebar", { axis: 'y', theme: 'metro',scrollButtons: { enable: true } });
-      (function ($) {
-        $(document).ready(function () {
-          // mcustomscrollbar('#sidebar',{
-          //     theme: "minimal"
-          // });
-  
-          $('#dismiss, .overlay').on('click', function () {
-              $('#sidebar').removeClass('active');
-              $('.overlay').removeClass('active');
-          });
-  
-          $('#sidebarCollapse').on('click', function () {
-             // $('#sidebar').addClass('active');
-             // $('.overlay').addClass('active');
-             // $('.collapse.in').toggleClass('in');
-           
-              $('#sidebar').toggleClass('active');
-            //  $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-          });
-      });
-  
-      $(document).ready(function () {
-        $('ul.nav > li > a').click(function (e) {
-            e.preventDefault();
-            $('ul.nav > li > a').removeClass('active');
-            $(this).addClass('active');
+      (function () {
+        "use strict";
+      
+        var treeviewMenu = jQuery('.app-menu');
+      
+        // Toggle Sidebar
+        jQuery('[data-toggle="sidebar"]').click(function(event) {
+          event.preventDefault();
+          jQuery('.app').toggleClass('sidenav-toggled');
         });
-    });
-      })(jQuery);
+      
+        // Activate sidebar treeview toggle
+        jQuery("[data-toggle='treeview']").click(function(event) {
+          event.preventDefault();
+          if(!jQuery(this).parent().hasClass('is-expanded')) {
+            treeviewMenu.find("[data-toggle='treeview']").parent().removeClass('is-expanded');
+          }
+          jQuery(this).parent().toggleClass('is-expanded');
+        });
+      
+        // Set initial active toggle
+        jQuery("[data-toggle='treeview.'].is-expanded").parent().toggleClass('is-expanded');
+      
+        //Activate bootstrip tooltips
+        jQuery("[data-toggle='tooltip']").tooltip();
+      
+      })();
+      (jQuery);
+    }
+
+
+    onclink(){
+      
+      jQuery('.app').toggleClass('sidenav-toggled');
     }
    
-    public onToggleSidenav = () => {
-      this.sidenavToggle.emit();
-    }
+    
   logout() {
     this.accountService.logout();
 }

@@ -71,11 +71,12 @@ export class LoginComponent implements OnInit {
     }
     this.loading = true;
     let logins: login = {
-      companyCode: this.form.get("companyCode").value,
-      userName: this.form.get("userName").value,
-      password: this.form.get("password").value,
+      companyCode:"H001",
+      userName:"Rahul",
+      password: "123",
 
     };
+    debugger
     const returnUrl = this.avRoute.snapshot.queryParams['returnUrl'] || '/';
      this.router.navigateByUrl(returnUrl);
     

@@ -54,8 +54,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormEntrylistComponent } from './formEntry/form-entrylist/form-entrylist.component';
 import { FormEntryaddComponent } from './formEntry/form-entryadd/form-entryadd.component';
-import { CustomerDocumentUploadListComponent } from './_CustomerDocument/customer-document-upload-list/customer-document-upload-list.component';
-import { CustomerDocumentUploadCreateComponent } from './_CustomerDocument/customer-document-upload-create/customer-document-upload-create.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -85,8 +84,7 @@ import { CustomerDocumentUploadCreateComponent } from './_CustomerDocument/custo
     DeletedialogComponent,
     FormEntrylistComponent,
     FormEntryaddComponent,
-    CustomerDocumentUploadListComponent,
-    CustomerDocumentUploadCreateComponent,
+ 
     
   
     

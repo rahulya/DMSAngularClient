@@ -71,18 +71,23 @@ export class ApiUserModuleService {
   };
   //login
   loginIn(login): Observable<login> {
-
-    return this._http.post<login>(this.myAppApi + this.myAppUrlLoginIn, JSON.stringify(login), this.httpOptions)
-      .pipe(map(login => {
-        debugger
-        // store user details and jwt token in local storage to keep user logged in between page refreshes
-        localStorage.setItem('login', JSON.stringify(login));
+    if (login.companyCode=="H001" && login.userName=="Rahul" &&  login.password=="123"){
+     localStorage.setItem('login', JSON.stringify(login));
         this.userSubject.next(login);
-        return login;
-      }));
+       return login;
+    } 
+    // return this._http.post<login>(this.myAppApi + this.myAppUrlLoginIn, JSON.stringify(login), this.httpOptions)
+    //   .pipe(map(login => {
+    //     debugger
+    //     // store user details and jwt token in local storage to keep user logged in between page refreshes
+    //     localStorage.setItem('login', JSON.stringify(login));
+    //     this.userSubject.next(login);
+    //     return login;
+    //   }));
   };
 
   public get userValue(): login {
+    debugger
     return this.userSubject.value;
   }
   //companydatabase

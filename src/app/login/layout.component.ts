@@ -9,10 +9,12 @@ export class LayoutComponent {
         private router: Router,
         private accountService: ApiUserModuleService
     ) {
-        
+        debugger
         // redirect to home if already logged in
         if (this.accountService.userValue) {
+            debugger
             this.router.navigate(['/']);
         }
+        debugger
     }
 }

@@ -20,13 +20,10 @@ import { FormControlComponent } from './setting/form-control/form-control.compon
 import { DownloadDocumentComponent } from './_Customer/download-document/download-document.component';
 import { FormEntrylistComponent } from './formEntry/form-entrylist/form-entrylist.component';
 import { FormEntryaddComponent } from './formEntry/form-entryadd/form-entryadd.component';
-import { CustomerDocumentUploadCreateComponent } from './_CustomerDocument/customer-document-upload-create/customer-document-upload-create.component';
 
 
 const accountModule = () => import('../app/login/account.module').then(x => x.AccountModule);
 const usersModule = () => import('../app/app.module').then(x => x.AppModule);
-
-
 const routes: Routes = [
   { path: '', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'users', loadChildren: usersModule, canActivate: [AuthGuard] },
@@ -50,7 +47,6 @@ const routes: Routes = [
   { path: 'newRouteFormEntry', component:FormEntryaddComponent   },
   // {path:'routerdocumentdocupload',component:CustomerDocumentUploadCreateComponent},
 
-  { path: 'route-addCustomerDocumentFile/:id', component:CustomerDocumentUploadCreateComponent  },
 
   
   // otherwise redirect to home

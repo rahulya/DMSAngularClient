@@ -1,213 +1,179 @@
-<!-- <mat-toolbar style="background-color: darkcyan;">My App
-    <a [routerLink]="['/']" class="nav-link">Home</a>
-    <a [routerLink]="['Customer']" class="nav-link">Customer</a>
-  
-</mat-toolbar> -->
-<div class="wrapper">
-
-  <!-- Sidebar  -->
-
-      <nav id="sidebar">
-         
-       
-          <div id="dismiss">
-              <i class="fas fa-arrow-left"></i>
-          </div>
-
-          <div class="sidebar-header">
-              <h3>Accounting Software</h3>
-          </div>
-
-          <ul class="list-unstyled components">
-              <p>User Name</p>
-              <li class="active">
-                  <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"
-                      class="dropdown-toggle">Master</a>
-                  <ul class="collapse list-unstyled" id="homeSubmenu">
-                      <li>
-                          <a href="#">Ledger</a>
-                      </li>
-
-                      <li>
-                          <a href="#">Customer</a>
-                      </li>
-                      <li>
-                          <a href="#">Vendor</a>
-                      </li>
-                      <li>
-                          <a href="#">Billing Terms</a>
-                      </li>
-                      <li>
-                          <a href="#">Product</a>
-                      </li>
-                      <li>
-                          <a href="#">Agent</a>
-                      </li>
-                      <li>
-                          <a href="#">Area</a>
-                      </li>
-                      <li>
-                          <a href="#">Branch</a>
-                      </li>
-                      <li>
-                          <a href="#">Godown</a>
-                      </li>
-                      <li>
-                          <a href="#">Opening Balance</a>
-                      </li>
-                      <li>
-                          <a href="#">Currency</a>
-                      </li>
-                      <li>
-                          <a href="#">Remark Master</a>
-                      </li>
-                      <li>
-                          <a href="#">Document Class</a>
-                      </li>
-                      
-                  </ul>
-              </li>
-              <li>
-                  <a href="#">About</a>
-                  
-                   
-
-          
-
-                    <a href="#">About</a>
-                  <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
-                      class="dropdown-toggle">Pages</a>
-                  <ul class="collapse list-unstyled" id="pageSubmenu">
-                      <li>
-                          <a href="#">Page 1</a>
-                      </li>
-                      <li>
-                          <a href="#">Page 2</a>
-                      </li>
-                      <li>
-                          <a href="#">Page 3</a>
-                      </li>
-                  </ul>
-              </li>
-              <li>
-                  <a href="#">Portfolio</a>
-              </li>
-              <li>
-                  <a href="#">Contact</a>
-              </li>
-              <li>
-                  <a href="#">User Name</a>
-                  <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false"
-                      class="dropdown-toggle">User Menu</a>
-                  <ul class="collapse list-unstyled" id="userSubmenu">
-                      <li>
-                          <a href="#">Profile</a>
-                      </li>
-                      <li>
-                          <a href="#">Setting</a>
-                      </li>
-                      <li>
-                          <a href="#">Log Out</a>
-                      </li>
-                  </ul>
-              </li>
-          </ul>
-
-
-
-      </nav>
-
-
-  <!-- Page Content  -->
-  <div id="content">
-
-      <nav class="navbar navbar-expand-lg fixed-top">
-          <!--For Logo-->
-          <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-          <div class="container">
-
-              <button type="button" id="sidebarCollapse" class="btn btn togglebtn">
-                  <i class="fa fa-align-left"></i>
-                  <span></span>
-              </button>
-
-
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <div class="col-sm-11">
-                      <ul class="nav navbar-nav">
-                          <li class="nav-item">
-                              <a [routerLink]="['/']"  class="nav-link" href="#"><i class="fa fa-home"></i>
-                              Dashboard
-                              </a>
-                          </li>
-                          <li class="dropdown">
-                             
-                              <a  class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                                
-                                  Master<span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu" role="menu">
-                                  <li class="nav-item">
-                                      <a [routerLink]="['UsergGroupList']"  class="nav-link" href="#">User Group</a>
-                                  </li>
-                                  <div class="dropdown-divider"></div>
-
-                                  <li class="nav-item">
-                                      <a [routerLink]="['UserList']"   class="nav-link" href="#">User</a>
-                                  </li>
-                                 
-                              </ul>
-                          </li>
-                         
-                         
-                          <li class="nav-item">
-                              <a class="nav-link" href="#">Setting</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="#">Company</a>
-                          </li>
-                      </ul>
-                  </div>
-                  <div class="col-sm-1" >
-                      <ul class="navbar-nav ml-auto ">
-                          <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="20" height="20" class="rounded-circle">
-                          </a>
-                          <ul class="dropdown-menu" role="menu">
-                              <li class="nav-item">
-                                  <a class="nav-link" href="#">Profile</a>
-                              </li>
-                              <li class="nav-item">
-                                  <a class="nav-link" href="#">Setting</a>
-                              </li>
-                              <li class="nav-item">
-                                  <a class="nav-link" href="#">Log Out</a>
-                              </li>
-                             
-                          </ul>
-                        </li>   
-                      </ul>
-                  </div>
+<body class="">
+    <div>
+    <div class="app sidebar-mini">
+      <!-- Navbar-->
+      <header class="app-header"><a class="app-header__logo" [routerLink]="['home']">Vidhya Dhan</a>
+        <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
+        <!-- Navbar Right Menu-->
+        <ul class="app-nav">
+          <li class="app-search">
+            <input class="app-search__input" type="search" placeholder="Search">
+            <button class="app-search__button"><i class="fa fa-search"></i></button>
+          </li>
+          <!--Notification Menu-->
+          <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Show notifications"><i class="fa fa-bell-o fa-lg"></i></a>
+            <ul class="app-notification dropdown-menu dropdown-menu-right">
+              <li class="app-notification__title">You have 4 new notifications.</li>
+              <div class="app-notification__content">
+                <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span></span>
+                    <div>
+                      <p class="app-notification__message">Lisa sent you a mail</p>
+                      <p class="app-notification__meta">2 min ago</p>
+                    </div></a></li>
+                <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-danger"></i><i class="fa fa-hdd-o fa-stack-1x fa-inverse"></i></span></span>
+                    <div>
+                      <p class="app-notification__message">Mail server not working</p>
+                      <p class="app-notification__meta">5 min ago</p>
+                    </div></a></li>
+                <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-success"></i><i class="fa fa-money fa-stack-1x fa-inverse"></i></span></span>
+                    <div>
+                      <p class="app-notification__message">Transaction complete</p>
+                      <p class="app-notification__meta">2 days ago</p>
+                    </div></a></li>
+                <div class="app-notification__content">
+                  <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span></span>
+                      <div>
+                        <p class="app-notification__message">Lisa sent you a mail</p>
+                        <p class="app-notification__meta">2 min ago</p>
+                      </div></a></li>
+                  <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-danger"></i><i class="fa fa-hdd-o fa-stack-1x fa-inverse"></i></span></span>
+                      <div>
+                        <p class="app-notification__message">Mail server not working</p>
+                        <p class="app-notification__meta">5 min ago</p>
+                      </div></a></li>
+                  <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-success"></i><i class="fa fa-money fa-stack-1x fa-inverse"></i></span></span>
+                      <div>
+                        <p class="app-notification__message">Transaction complete</p>
+                        <p class="app-notification__meta">2 days ago</p>
+                      </div></a></li>
+                </div>
               </div>
-
+              <li class="app-notification__footer"><a href="#">See all notifications.</a></li>
+            </ul>
+          </li>
+          <!-- User Menu-->
+          <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="fa fa-user fa-lg"></i></a>
+            <ul class="dropdown-menu settings-menu dropdown-menu-right">
+              <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
+              <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-user fa-lg"></i> Profile</a></li>
+              <li><a class="dropdown-item" href="page-login.html"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </header>
+      <!-- Sidebar menu-->
+      <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+      <aside class="app-sidebar">
+        <div class="app-sidebar__user">
+          <div>
+            <p class="app-sidebar__user-name">John Doe</p>
+            <p class="app-sidebar__user-designation">Frontend Developer</p>
           </div>
-      </nav>
-      <div class="app-container" [ngClass]="{ 'bg-light': login }">
-       
-        <router-outlet></router-outlet>
-    </div>
-    
-      <!-- <div class="container" style="margin-top:70px">
-          <div class="col-sm-12" >
-              <router-outlet></router-outlet>  
-          </div>
-          <div class="col-sm-2">
+        </div>
+        <ul class="app-menu">
+          <li><a class="app-menu__item active" [routerLink]="['home']"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a></li>
          
-          </div>
-              
-      </div> -->
-  </div>
+          <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-laptop"></i><span class="app-menu__label">Master</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+              <li><a class="treeview-item" [routerLink]="['list-class']"><i class="icon fa fa-circle-o"></i>Class</a></li>
+              <li><a class="treeview-item" [routerLink]="['new-section']"><i class="icon fa fa-circle-o"></i>Section</a></li>
+              <li><a class="treeview-item" href="ui-cards.html"><i class="icon fa fa-circle-o"></i> Cards</a></li>
+              <li><a class="treeview-item" href="widgets.html"><i class="icon fa fa-circle-o"></i> Widgets</a></li>
+            </ul>
+          </li>
+          <li><a class="app-menu__item" href="charts.html"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Charts</span></a></li>
+          <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">Forms</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+              <li><a class="treeview-item" href="form-components.html"><i class="icon fa fa-circle-o"></i> Form Components</a></li>
+              <li><a class="treeview-item" href="form-custom.html"><i class="icon fa fa-circle-o"></i> Custom Components</a></li>
+              <li><a class="treeview-item" href="form-samples.html"><i class="icon fa fa-circle-o"></i> Form Samples</a></li>
+              <li><a class="treeview-item" href="form-notifications.html"><i class="icon fa fa-circle-o"></i> Form Notifications</a></li>
+            </ul>
+          </li>
+          <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Tables</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+              <li><a class="treeview-item" href="table-basic.html"><i class="icon fa fa-circle-o"></i> Basic Tables</a></li>
+              <li><a class="treeview-item" href="table-data-table.html"><i class="icon fa fa-circle-o"></i> Data Tables</a></li>
+            </ul>
+          </li>
+          <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-file-text"></i><span class="app-menu__label">Pages</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+              <li><a class="treeview-item" href="blank-page.html"><i class="icon fa fa-circle-o"></i> Blank Page</a></li>
+              <li><a class="treeview-item" href="page-login.html"><i class="icon fa fa-circle-o"></i> Login Page</a></li>
+              <li><a class="treeview-item" href="page-lockscreen.html"><i class="icon fa fa-circle-o"></i> Lockscreen Page</a></li>
+              <li><a class="treeview-item" href="page-user.html"><i class="icon fa fa-circle-o"></i> User Page</a></li>
+              <li><a class="treeview-item" href="page-invoice.html"><i class="icon fa fa-circle-o"></i> Invoice Page</a></li>
+              <li><a class="treeview-item" href="page-calendar.html"><i class="icon fa fa-circle-o"></i> Calendar Page</a></li>
+              <li><a class="treeview-item" href="page-mailbox.html"><i class="icon fa fa-circle-o"></i> Mailbox</a></li>
+              <li><a class="treeview-item" href="page-error.html"><i class="icon fa fa-circle-o"></i> Error Page</a></li>
+            </ul>
+          </li>
+          <li><a class="app-menu__item" href="docs.html"><i class="app-menu__icon fa fa-file-code-o"></i><span class="app-menu__label">Docs</span></a></li>
+        </ul>
+      </aside>
+    </div>
 </div>
-
-<div class="overlay"></div>
+      <main class="app-content" [ngClass]="{ 'bg-light': login }">
+        <router-outlet></router-outlet>
+      </main>
+      
+      
+      <script type="text/javascript">
+        var data = {
+            labels: ["January", "February", "March", "April", "May"],
+            datasets: [
+                {
+                    label: "My First dataset",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [65, 59, 80, 81, 56]
+                },
+                {
+                    label: "My Second dataset",
+                    fillColor: "rgba(151,187,205,0.2)",
+                    strokeColor: "rgba(151,187,205,1)",
+                    pointColor: "rgba(151,187,205,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(151,187,205,1)",
+                    data: [28, 48, 40, 19, 86]
+                }
+            ]
+        };
+        var pdata = [
+            {
+                value: 300,
+                color: "#46BFBD",
+                highlight: "#5AD3D1",
+                label: "Complete"
+            },
+            {
+                value: 50,
+                color:"#F7464A",
+                highlight: "#FF5A5E",
+                label: "In-Progress"
+            }
+        ]
+        
+        var ctxl = $("#lineChartDemo").get(0).getContext("2d");
+        var lineChart = new Chart(ctxl).Line(data);
+        
+        var ctxp = $("#pieChartDemo").get(0).getContext("2d");
+        var pieChart = new Chart(ctxp).Pie(pdata);
+      </script>
+      <!-- Google analytics script-->
+      <script type="text/javascript">
+        if(document.location.hostname == 'pratikborsadiya.in') {
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-72504830-1', 'auto');
+            ga('send', 'pageview');
+        }
+      </script>
+    </body>
